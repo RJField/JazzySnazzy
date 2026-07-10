@@ -1,12 +1,14 @@
-extends Node2D
+class_name Room extends Node2D
 
 @onready var floor_area: Area2D = $Floor
 @onready var room_state: RoomState = $RoomState
 
 func _ready() -> void:
+    #added await for first physics frame to avoid immediate state change on run (i.e. we want the placement as part of world to set this, not the initial overlap)
+    room_state.state_changed.connect(_on_state_changed)
+    await get_tree().physics_frame
     floor_area.body_entered.connect(_on_body_entered)
     floor_area.body_exited.connect(_on_body_exited)
-    room_state.state_changed.connect(_on_state_changed)
 
 func _on_body_entered(body: Node):
     if not body.is_in_group("player"):
