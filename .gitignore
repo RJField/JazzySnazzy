@@ -1,0 +1,33 @@
+# ---- Godot 4 ----
+# Import cache + editor state. Regenerated on open. Never commit.
+.godot/
+
+# Generated Android build template
+/android/
+
+# Compiled translations (built from source CSVs)
+*.translation
+
+# ---- Exports ----
+# Contains export paths, and on Android, keystore passwords.
+# Uncomment if you ever sign builds. Keep a .example committed instead.
+# export_presets.cfg
+
+# Local export output
+/builds/
+/export/
+
+# ---- Editor / OS ----
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Art source scratch ----
+*.aseprite~
+*.kra~
+*.blend1
+*.blend2
