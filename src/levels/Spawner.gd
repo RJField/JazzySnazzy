@@ -15,7 +15,7 @@ func _ready() -> void:
 func _spawn_pool_picker(pool: Array[EnemyData]) -> EnemyData:
     if pool.is_empty():
         return null
-    return pool[0]
+    return pool.pick_random()
 
 
 func spawn() -> Node:
