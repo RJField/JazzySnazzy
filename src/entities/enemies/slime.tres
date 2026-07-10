@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://bc70vgxh3l6ey"]
+
+[ext_resource type="Script" uid="uid://cjdvlx48btii3" path="res://src/entities/enemies/EnemyData.gd" id="1_4rvn7"]
+[ext_resource type="PackedScene" uid="uid://cko62wutiaurc" path="res://src/entities/enemies/BaseEnemy.tscn" id="1_qaygt"]
+
+[resource]
+script = ExtResource("1_4rvn7")
+max_health = 70.0
+speed = 5.0
+scene = ExtResource("1_qaygt")
+metadata/_custom_type_script = "uid://cjdvlx48btii3"

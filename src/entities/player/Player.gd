@@ -20,4 +20,3 @@ func attack():
     var b = bullet_scene.instantiate()
     get_tree().root.add_child(b)
     b.global_transform = $WeaponPivot.global_transform
-    # No signal connection here!

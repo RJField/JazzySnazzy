@@ -4,7 +4,7 @@ signal death_event
 
 @onready var health_component: HealthComponent = $HealthComponent
 
-var speed: float = 20.0
+var speed: float
 var _dying: bool = false
 var _def: EnemyData
 var _target: Node2D

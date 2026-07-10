@@ -42,6 +42,6 @@ shape = SubResource("RectangleShape2D_evsmo")
 motion_mode = 1
 
 [node name="Spawner" parent="." unique_id=1686735992 node_paths=PackedStringArray("container") instance=ExtResource("2_vs3x7")]
-position = Vector2(211, -177)
+position = Vector2(309, -153)
 def = ExtResource("3_evsmo")
 container = NodePath("../Entities")

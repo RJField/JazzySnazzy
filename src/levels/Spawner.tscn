@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://cxtqsqgsg3f4u"]
 
 [ext_resource type="Script" uid="uid://bfbbyk4756ciu" path="res://src/levels/Spawner.gd" id="1_xpt8c"]
+[ext_resource type="Script" uid="uid://cjdvlx48btii3" path="res://src/entities/enemies/EnemyData.gd" id="2_ccsba"]
+[ext_resource type="Resource" uid="uid://bc70vgxh3l6ey" path="res://src/entities/enemies/slime.tres" id="3_tp1ie"]
 
 [node name="Spawner" type="Marker2D" unique_id=1686735992]
 script = ExtResource("1_xpt8c")
+spawn_pool = Array[ExtResource("2_ccsba")]([ExtResource("3_tp1ie")])
