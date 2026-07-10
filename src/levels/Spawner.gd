@@ -4,12 +4,10 @@ class_name Spawner extends Marker2D
 @export var container: Node2D
 
 #variables WIP for spawner logic
-var current_alive: int
-#var spawn_timer: #???
-
 
 func _ready() -> void:
-    spawn.call_deferred()
+    add_to_group("spawners")
+    #pawn.call_deferred()
 
 
 func _spawn_pool_picker(pool: Array[EnemyData]) -> EnemyData:

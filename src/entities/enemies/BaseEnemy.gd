@@ -29,7 +29,6 @@ func configure(def: EnemyData, target: Node2D) -> void:
 	_def = def
 	_target = target
 
-
 func _apply_configuration() -> void:
 	if _def == null:
 		push_warning("Enemy spawned without a def, using inspector values")

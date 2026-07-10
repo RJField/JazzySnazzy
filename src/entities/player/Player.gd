@@ -3,6 +3,10 @@ extends CharacterBody2D
 @export var speed: float = 200.0
 @export var bullet_scene : PackedScene
 
+
+func _ready() -> void:
+    add_to_group("player")
+
 func _unhandled_input(event: InputEvent) -> void:
     if event.is_action_pressed("attack"):
         attack()

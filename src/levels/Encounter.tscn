@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://i4u3pgb7il7n"]
+
+[ext_resource type="Script" uid="uid://e57wc3fnv60o" path="res://src/levels/Encounter.gd" id="1_hugsn"]
+
+[node name="Encounter" type="Node2D" unique_id=2030808805]
+script = ExtResource("1_hugsn")
