@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://gv5xchtq5ofh"]
+
+[ext_resource type="Script" uid="uid://cjdvlx48btii3" path="res://src/entities/enemies/EnemyData.gd" id="1_doyp8"]
+[ext_resource type="PackedScene" uid="uid://cko62wutiaurc" path="res://src/entities/enemies/BaseEnemy.tscn" id="1_hqpy2"]
+
+[resource]
+script = ExtResource("1_doyp8")
+display_name = "Goblin"
+scene = ExtResource("1_hqpy2")
+metadata/_custom_type_script = "uid://cjdvlx48btii3"

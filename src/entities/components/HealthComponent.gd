@@ -6,7 +6,7 @@ signal health_depleted
 var current_health: float
 
 func _ready() -> void:
-	current_health = max_health
+	reset_health(max_health)
 
 func damage(amount: float) -> void:
 	if current_health <= 0:
@@ -14,3 +14,7 @@ func damage(amount: float) -> void:
 	current_health -= amount
 	if current_health <= 0:
 		health_depleted.emit()
+
+func reset_health(amount: float) -> void:
+	max_health = amount
+	current_health = max_health

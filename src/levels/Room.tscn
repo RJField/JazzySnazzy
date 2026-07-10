@@ -41,4 +41,4 @@ shape = SubResource("RectangleShape2D_evsmo")
 motion_mode = 1
 
 [node name="BaseEnemy" parent="Entities" unique_id=1478121783 instance=ExtResource("2_vs3x7")]
-position = Vector2(160, 126)
+position = Vector2(247, 89)
