@@ -1,6 +1,7 @@
 class_name RoomState extends Node
 
 signal state_changed(old_state: State, new_state: State)
+signal room_cleared
 
 enum State {UNATTENDED,
             ATTENDING,
@@ -15,6 +16,7 @@ const LEGAL = {
 }
 
 var state: State = State.UNATTENDED
+var cleared: bool = false
 
 func _set_state(new_state: State):
     if new_state == state:
@@ -32,3 +34,11 @@ func enter() -> void:
 
 func exit() -> void:
     _set_state(State.ATTENDED)
+
+
+func mark_cleared() -> void:
+    if cleared:
+        return
+    cleared = true
+    room_cleared.emit()
+    print("Room cleared!")

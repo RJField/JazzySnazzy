@@ -11,16 +11,16 @@
 [ext_resource type="PackedScene" uid="uid://i4u3pgb7il7n" path="res://src/levels/Encounter.tscn" id="9_fdkvs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hibjq"]
-size = Vector2(55.5, 646.5)
+size = Vector2(55.5, 694)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fghu7"]
-size = Vector2(1191, 130.25)
+size = Vector2(1095.25, 39.5625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evsmo"]
-size = Vector2(1191, 130.25)
+size = Vector2(1090, 34.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8s4bh"]
-size = Vector2(1257, 808)
+size = Vector2(1000, 700)
 
 [node name="Room" type="Node2D" unique_id=2058189957]
 script = ExtResource("1_ewo0c")
@@ -31,20 +31,19 @@ script = ExtResource("1_ewo0c")
 position = Vector2(-417, -216)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=813030665]
-position = Vector2(-153, 220)
+position = Vector2(-102, 209)
 shape = SubResource("RectangleShape2D_hibjq")
-disabled = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=2094030806]
-position = Vector2(406, -111)
+position = Vector2(416.375, -141.21875)
 shape = SubResource("RectangleShape2D_fghu7")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=1480441774]
-position = Vector2(978, 239)
+position = Vector2(936, 213)
 shape = SubResource("RectangleShape2D_hibjq")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=565333130]
-position = Vector2(407, 536)
+position = Vector2(416, 568.9375)
 shape = SubResource("RectangleShape2D_evsmo")
 
 [node name="Entities" type="Node2D" parent="." unique_id=1487080622]
@@ -81,4 +80,4 @@ shape = SubResource("RectangleShape2D_8s4bh")
 
 [node name="Encounter" parent="." unique_id=2030808805 instance=ExtResource("9_fdkvs")]
 position = Vector2(189, 416)
-enemy_count_to_spawn = 3
+enemy_count_to_spawn = 1
