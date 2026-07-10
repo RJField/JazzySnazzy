@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cu0dwvqcmpi7h"]
 
 [ext_resource type="PackedScene" uid="uid://db1rrth7mybvq" path="res://src/entities/player/Player.tscn" id="1_fghu7"]
-[ext_resource type="PackedScene" uid="uid://cko62wutiaurc" path="res://src/entities/enemies/BaseEnemy.tscn" id="2_vs3x7"]
+[ext_resource type="PackedScene" uid="uid://cxtqsqgsg3f4u" path="res://src/levels/Spawner.tscn" id="2_vs3x7"]
+[ext_resource type="Resource" uid="uid://gv5xchtq5ofh" path="res://src/entities/enemies/goblin.tres" id="3_evsmo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hibjq"]
 size = Vector2(55.5, 646.5)
@@ -40,5 +41,7 @@ shape = SubResource("RectangleShape2D_evsmo")
 [node name="Player" parent="Entities" unique_id=151813150 instance=ExtResource("1_fghu7")]
 motion_mode = 1
 
-[node name="BaseEnemy" parent="Entities" unique_id=1478121783 instance=ExtResource("2_vs3x7")]
-position = Vector2(247, 89)
+[node name="Spawner" parent="." unique_id=1686735992 node_paths=PackedStringArray("container") instance=ExtResource("2_vs3x7")]
+position = Vector2(211, -177)
+def = ExtResource("3_evsmo")
+container = NodePath("../Entities")
