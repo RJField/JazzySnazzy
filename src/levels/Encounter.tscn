@@ -4,3 +4,4 @@
 
 [node name="Encounter" type="Node2D" unique_id=2030808805]
 script = ExtResource("1_hugsn")
+enemy_count_to_spawn = 4

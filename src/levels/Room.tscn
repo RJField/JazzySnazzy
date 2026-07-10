@@ -80,4 +80,4 @@ shape = SubResource("RectangleShape2D_8s4bh")
 
 [node name="Encounter" parent="." unique_id=2030808805 instance=ExtResource("9_fdkvs")]
 position = Vector2(189, 416)
-enemy_count_to_spawn = 1
+enemy_count_to_spawn = 2

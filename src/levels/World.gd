@@ -8,6 +8,7 @@ const ROOM_SPACING = 1400
 @onready var player: CharacterBody2D = $Player
 
 var all_rooms: Array = []
+var current_room: Room
 
 func _ready() -> void:
     instantiate_rooms()
@@ -22,7 +23,8 @@ func activate(target, entry):
             #set live
             r.process_mode = Node.PROCESS_MODE_INHERIT
             r.visible = true
-
+            current_room = r
+            print(current_room)
         else:
             #set dormant
             r.process_mode = Node.PROCESS_MODE_DISABLED
@@ -34,4 +36,17 @@ func instantiate_rooms():
         add_child(r)
         r.position = Vector2(i * ROOM_SPACING, 0)
         all_rooms.append(r)
+        r.room_complete.connect(_on_room_complete)
 
+func _on_room_complete() -> void:
+    var next = get_next_room()
+    if next:
+        activate(next, next.position)
+        print("next level: ", next)
+
+func get_next_room() -> Room:
+    var room_index = all_rooms.find(current_room) + 1
+    if room_index >= all_rooms.size():
+        return null
+    return all_rooms[room_index]
+    
