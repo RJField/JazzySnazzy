@@ -13,7 +13,7 @@ size = Vector2(32, 32)
 size = Vector2(32, 32)
 
 [node name="Player" type="CharacterBody2D" unique_id=151813150]
-collision_layer = 2
+collision_layer = 512
 script = ExtResource("1_5ow34")
 bullet_scene = ExtResource("2_lvau8")
 

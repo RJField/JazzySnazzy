@@ -28,6 +28,7 @@ func choose_spawner() -> Spawner:
         return chosen
 
 func begin() -> void:
+    print("begin triggered on Encounter")
     done_spawning = false
     while enemy_count_to_spawn > 0:
         #added a one second delay to ensure no collision on spawn preventing spawn -> but we need to revisit this
