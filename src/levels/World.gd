@@ -12,6 +12,7 @@ var current_room: Room
 
 func _ready() -> void:
     instantiate_rooms()
+    set_door_taget()
     activate(all_rooms[0], Vector2.ZERO)
     return
 
@@ -41,8 +42,7 @@ func instantiate_rooms():
 func _on_room_complete() -> void:
     var next = get_next_room()
     if next:
-        activate(next, next.position)
-        print("next level: ", next)
+        print("room completed!")
 
 func get_next_room() -> Room:
     var room_index = all_rooms.find(current_room) + 1
@@ -50,3 +50,15 @@ func get_next_room() -> Room:
         return null
     return all_rooms[room_index]
     
+func set_door_taget():
+    print("set_door_target called for count of rooms: ", all_rooms.size())
+    for i in all_rooms.size():
+        if i + 1 >= all_rooms.size():
+            continue
+        for door in all_rooms[i].get_doors():
+            door.target = all_rooms[i + 1]
+            door.transition_requested.connect(_on_transition_requested)
+
+func _on_transition_requested(target):
+    activate(target, target.position)
+    print("moving to next level")

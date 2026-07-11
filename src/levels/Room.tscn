@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://buc0hbyufm2af" path="res://src/levels/RoomState.tscn" id="7_5ck08"]
 [ext_resource type="Script" uid="uid://2fp123sqnmhh" path="res://src/levels/RoomState.gd" id="9_6lgt5"]
 [ext_resource type="PackedScene" uid="uid://i4u3pgb7il7n" path="res://src/levels/Encounter.tscn" id="9_fdkvs"]
+[ext_resource type="PackedScene" uid="uid://bm3aecdgq8r1j" path="res://src/levels/Door.tscn" id="10_fdkvs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hibjq"]
 size = Vector2(55.5, 694)
@@ -81,3 +82,6 @@ shape = SubResource("RectangleShape2D_8s4bh")
 [node name="Encounter" parent="." unique_id=2030808805 instance=ExtResource("9_fdkvs")]
 position = Vector2(189, 416)
 enemy_count_to_spawn = 2
+
+[node name="Door" parent="." unique_id=844228051 instance=ExtResource("10_fdkvs")]
+position = Vector2(5, -346)

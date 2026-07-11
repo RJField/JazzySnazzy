@@ -44,7 +44,6 @@ func begin() -> void:
     done_spawning = true
     _check_cleared()
 
-
 func _on_enemy_died(enemy) -> void:
     print("died: ", enemy)
     spawned_enemies.erase(enemy)
@@ -53,7 +52,6 @@ func _on_enemy_died(enemy) -> void:
 func _on_state_changed(old_state, new_state):
     if new_state == RoomState.State.ATTENDING and old_state == RoomState.State.UNATTENDED:
         begin()
-
 
 func _check_cleared() -> void:
     if done_spawning and spawned_enemies.is_empty():
