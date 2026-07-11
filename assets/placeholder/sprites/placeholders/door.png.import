@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccservoxiggme"
-path="res://.godot/imported/enemy.png-2bc00d5222c6ad20d9fbc774f89ed042.ctex"
+uid="uid://bhjxi4ne00hxw"
+path="res://.godot/imported/door.png-5e07296164fb5ceb9d1de6d6f6cec57f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/placeholders/enemy.png"
-dest_files=["res://.godot/imported/enemy.png-2bc00d5222c6ad20d9fbc774f89ed042.ctex"]
+source_file="res://assets/placeholder/sprites/placeholders/door.png"
+dest_files=["res://.godot/imported/door.png-5e07296164fb5ceb9d1de6d6f6cec57f.ctex"]
 
 [params]
 

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cko62wutiaurc"]
 
-[ext_resource type="Texture2D" uid="uid://ccservoxiggme" path="res://assets/sprites/placeholders/enemy.png" id="1_p6y2y"]
+[ext_resource type="Texture2D" uid="uid://ccservoxiggme" path="res://assets/placeholder/sprites/placeholders/enemy.png" id="1_p6y2y"]
 [ext_resource type="Script" uid="uid://63q4j1sutsli" path="res://src/entities/enemies/BaseEnemy.gd" id="1_wvikt"]
 [ext_resource type="PackedScene" uid="uid://wi4wgbwq3m2r" path="res://src/entities/components/HitboxComponent.tscn" id="3_3opad"]
 [ext_resource type="PackedScene" uid="uid://cojkk48pi8e2o" path="res://src/entities/components/HealthComponent.tscn" id="4_xesd5"]
@@ -22,9 +22,8 @@ shape = SubResource("RectangleShape2D_wvikt")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=124299275]
 texture = ExtResource("1_p6y2y")
 
-[node name="HitboxComponent" parent="." unique_id=933166583 node_paths=PackedStringArray("health_component") instance=ExtResource("3_3opad")]
+[node name="HitboxComponent" parent="." unique_id=933166583 instance=ExtResource("3_3opad")]
 collision_mask = 4
-health_component = NodePath("../HealthComponent")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="HitboxComponent" unique_id=2055536570]
 shape = SubResource("RectangleShape2D_8s4bh")

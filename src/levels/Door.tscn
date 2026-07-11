@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bm3aecdgq8r1j"]
 
 [ext_resource type="Script" uid="uid://bk8qg1wyiench" path="res://src/levels/Door.gd" id="1_yc4pm"]
-[ext_resource type="Texture2D" uid="uid://bhjxi4ne00hxw" path="res://assets/sprites/placeholders/door.png" id="2_tdpyn"]
+[ext_resource type="Texture2D" uid="uid://bhjxi4ne00hxw" path="res://assets/placeholder/sprites/placeholders/door.png" id="2_tdpyn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hibjq"]
 size = Vector2(120, 60)
 
 [node name="Door" type="Area2D" unique_id=844228051]
-collision_mask = 2
+collision_mask = 514
 script = ExtResource("1_yc4pm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1324743064]

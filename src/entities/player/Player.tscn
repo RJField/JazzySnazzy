@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://db1rrth7mybvq"]
 
 [ext_resource type="Script" uid="uid://bd05flul2gjli" path="res://src/entities/player/Player.gd" id="1_5ow34"]
-[ext_resource type="Texture2D" uid="uid://couomoqhgtprs" path="res://assets/sprites/placeholders/player.png" id="1_vna0p"]
+[ext_resource type="Texture2D" uid="uid://couomoqhgtprs" path="res://assets/placeholder/sprites/placeholders/player.png" id="1_vna0p"]
 [ext_resource type="Script" uid="uid://e53i87oeenmv" path="res://src/entities/components/HitboxComponent.gd" id="2_awdo7"]
 [ext_resource type="PackedScene" uid="uid://wr5a544fxf2n" path="res://src/weapons/Bullet.tscn" id="2_lvau8"]
 [ext_resource type="PackedScene" uid="uid://cojkk48pi8e2o" path="res://src/entities/components/HealthComponent.tscn" id="2_vna0p"]
