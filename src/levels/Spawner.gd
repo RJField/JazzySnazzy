@@ -13,7 +13,7 @@ func _spawn_pool_picker(pool: Array[EnemyData]) -> EnemyData:
     return pool.pick_random()
 
 
-func spawn() -> Node:
+func spawn(body: CharacterBody2D) -> Node:
         if container == null:
             push_error("Container null")
             return null
@@ -25,7 +25,8 @@ func spawn() -> Node:
             push_error("Chosen null")
             return null
         var enemy = chosen.scene.instantiate()
-        enemy.configure(chosen, null)
         container.add_child(enemy)
+        print("for spawner, player is", body)
+        enemy.configure(chosen, body)
         enemy.global_position = global_position
         return enemy

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="PursuitBehavior" format=3 uid="uid://cmer72qmtreb6"]
+
+[ext_resource type="Script" uid="uid://ddimt1l6gdhxk" path="res://src/entities/enemies/behaviors/PursuitBehavior.gd" id="1_jag0t"]
+
+[resource]
+script = ExtResource("1_jag0t")
+metadata/_custom_type_script = "uid://ddimt1l6gdhxk"

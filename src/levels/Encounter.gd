@@ -6,6 +6,7 @@ signal encounter_complete
 var spawners: Array
 var spawned_enemies: Array
 var done_spawning: bool
+var player: CharacterBody2D
 
 
 @export var enemy_count_to_spawn: int = 2
@@ -29,6 +30,7 @@ func choose_spawner() -> Spawner:
 
 func begin() -> void:
     print("begin triggered on Encounter")
+    print("player is ", player)
     done_spawning = false
     while enemy_count_to_spawn > 0:
         #added a one second delay to ensure no collision on spawn preventing spawn -> but we need to revisit this
@@ -37,7 +39,7 @@ func begin() -> void:
         print("chosen: ", chosen, " remaining: ", enemy_count_to_spawn)
         if chosen == null:
             return
-        var enemy = chosen.spawn()
+        var enemy = chosen.spawn(player) #passes player so spawner can tell enemy whats the target
         enemy.death_event.connect(_on_enemy_died.bind(enemy))
         spawned_enemies.append(enemy)
         enemy_count_to_spawn -= 1
@@ -57,3 +59,6 @@ func _on_state_changed(old_state, new_state):
 func _check_cleared() -> void:
     if done_spawning and spawned_enemies.is_empty():
         encounter_complete.emit()
+
+func set_player(body: CharacterBody2D) -> void:
+    player = body

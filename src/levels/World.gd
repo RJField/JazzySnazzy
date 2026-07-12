@@ -36,6 +36,7 @@ func instantiate_rooms():
         var r = room_scene.instantiate()
         add_child(r)
         r.position = Vector2(i * ROOM_SPACING, 0)
+        r.set_player(player)
         all_rooms.append(r)
         r.room_complete.connect(_on_room_complete)
 

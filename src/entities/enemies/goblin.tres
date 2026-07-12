@@ -2,10 +2,20 @@
 
 [ext_resource type="Script" uid="uid://cjdvlx48btii3" path="res://src/entities/enemies/EnemyData.gd" id="1_doyp8"]
 [ext_resource type="PackedScene" uid="uid://cko62wutiaurc" path="res://src/entities/enemies/BaseEnemy.tscn" id="1_hqpy2"]
+[ext_resource type="Script" uid="uid://vv2sq5mj4yv5" path="res://src/entities/enemies/behaviors/EnemyBehavior.gd" id="1_sdgyl"]
+[ext_resource type="Script" uid="uid://ddimt1l6gdhxk" path="res://src/entities/enemies/behaviors/PursuitBehavior.gd" id="2_n7que"]
+[ext_resource type="Texture2D" uid="uid://ccservoxiggme" path="res://assets/placeholder/sprites/placeholders/enemy.png" id="5_eidin"]
+
+[sub_resource type="Resource" id="Resource_n7que"]
+script = ExtResource("2_n7que")
+metadata/_custom_type_script = "uid://ddimt1l6gdhxk"
 
 [resource]
 script = ExtResource("1_doyp8")
 max_health = 30.0
+speed = 150.0
 display_name = "Goblin"
 scene = ExtResource("1_hqpy2")
+behaviors = Array[ExtResource("1_sdgyl")]([SubResource("Resource_n7que")])
+texture = ExtResource("5_eidin")
 metadata/_custom_type_script = "uid://cjdvlx48btii3"

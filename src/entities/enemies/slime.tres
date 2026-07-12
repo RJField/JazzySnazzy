@@ -1,11 +1,19 @@
 [gd_resource type="Resource" script_class="EnemyData" format=3 uid="uid://bc70vgxh3l6ey"]
 
 [ext_resource type="Script" uid="uid://cjdvlx48btii3" path="res://src/entities/enemies/EnemyData.gd" id="1_4rvn7"]
+[ext_resource type="Script" uid="uid://vv2sq5mj4yv5" path="res://src/entities/enemies/behaviors/EnemyBehavior.gd" id="1_j3v1g"]
 [ext_resource type="PackedScene" uid="uid://cko62wutiaurc" path="res://src/entities/enemies/BaseEnemy.tscn" id="1_qaygt"]
+[ext_resource type="Script" uid="uid://ddimt1l6gdhxk" path="res://src/entities/enemies/behaviors/PursuitBehavior.gd" id="2_rqc1d"]
+[ext_resource type="Texture2D" uid="uid://ccservoxiggme" path="res://assets/placeholder/sprites/placeholders/enemy.png" id="5_rqc1d"]
+
+[sub_resource type="Resource" id="Resource_xesd5"]
+script = ExtResource("2_rqc1d")
+metadata/_custom_type_script = "uid://ddimt1l6gdhxk"
 
 [resource]
 script = ExtResource("1_4rvn7")
-max_health = 70.0
-speed = 5.0
+speed = 50.0
 scene = ExtResource("1_qaygt")
+behaviors = Array[ExtResource("1_j3v1g")]([SubResource("Resource_xesd5")])
+texture = ExtResource("5_rqc1d")
 metadata/_custom_type_script = "uid://cjdvlx48btii3"

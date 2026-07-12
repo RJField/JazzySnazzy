@@ -6,6 +6,8 @@ signal room_complete
 @onready var room_state: RoomState = $RoomState
 @onready var encounter: Encounter = $Encounter
 
+var player: CharacterBody2D
+
 func _ready() -> void:
     room_state.state_changed.connect(_on_state_changed)
     encounter.encounter_complete.connect(_on_encounter_complete)
@@ -39,3 +41,5 @@ func get_doors() -> Array:
     return get_tree().get_nodes_in_group("doors").filter(
         func(d): return is_ancestor_of(d))
     
+func set_player(player: CharacterBody2D) -> void:
+    encounter.set_player(player)
