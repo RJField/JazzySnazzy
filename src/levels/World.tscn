@@ -10,3 +10,4 @@ room_scene = ExtResource("1_42t1m")
 room_count = 5
 
 [node name="Player" parent="." unique_id=151813150 instance=ExtResource("2_0y64f")]
+z_index = 5

@@ -26,7 +26,6 @@ func spawn(body: CharacterBody2D) -> Node:
             return null
         var enemy = chosen.scene.instantiate()
         container.add_child(enemy)
-        print("for spawner, player is", body)
         enemy.configure(chosen, body)
         enemy.global_position = global_position
         return enemy

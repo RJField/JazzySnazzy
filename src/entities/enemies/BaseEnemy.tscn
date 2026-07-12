@@ -20,6 +20,7 @@ script = ExtResource("1_wvikt")
 shape = SubResource("RectangleShape2D_wvikt")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=124299275]
+z_index = 4
 texture = ExtResource("1_p6y2y")
 
 [node name="HitboxComponent" parent="." unique_id=933166583 instance=ExtResource("3_3opad")]

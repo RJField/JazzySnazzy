@@ -1,21 +1,24 @@
 [gd_scene format=3 uid="uid://cu0dwvqcmpi7h"]
 
 [ext_resource type="Script" uid="uid://cd84v56ufuvx1" path="res://src/levels/Room.gd" id="1_ewo0c"]
+[ext_resource type="Texture2D" uid="uid://dbxtlb0b3cyuo" path="res://assets/placeholder/sprites/placeholders/short_wall_50x700.png" id="2_7o6nb"]
 [ext_resource type="PackedScene" uid="uid://cxtqsqgsg3f4u" path="res://src/levels/Spawner.tscn" id="2_vs3x7"]
 [ext_resource type="Resource" uid="uid://gv5xchtq5ofh" path="res://src/entities/enemies/goblin.tres" id="3_evsmo"]
 [ext_resource type="Script" uid="uid://cjdvlx48btii3" path="res://src/entities/enemies/EnemyData.gd" id="3_uri12"]
+[ext_resource type="Texture2D" uid="uid://5poytskxilta" path="res://assets/placeholder/sprites/placeholders/long_wall_1100x40.png" id="3_w3v2l"]
 [ext_resource type="Resource" uid="uid://bc70vgxh3l6ey" path="res://src/entities/enemies/slime.tres" id="4_b7ysx"]
 [ext_resource type="AudioStream" uid="uid://bo2yqlnp7kmb8" path="res://assets/placeholder/audio/background.mp3" id="5_uri12"]
 [ext_resource type="PackedScene" uid="uid://buc0hbyufm2af" path="res://src/levels/RoomState.tscn" id="7_5ck08"]
 [ext_resource type="Script" uid="uid://2fp123sqnmhh" path="res://src/levels/RoomState.gd" id="9_6lgt5"]
 [ext_resource type="PackedScene" uid="uid://i4u3pgb7il7n" path="res://src/levels/Encounter.tscn" id="9_fdkvs"]
 [ext_resource type="PackedScene" uid="uid://bm3aecdgq8r1j" path="res://src/levels/Door.tscn" id="10_fdkvs"]
+[ext_resource type="Texture2D" uid="uid://cg637vxtw72vn" path="res://assets/placeholder/sprites/placeholders/floor.png" id="11_w3v2l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hibjq"]
-size = Vector2(55.5, 694)
+size = Vector2(50, 700)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fghu7"]
-size = Vector2(1095.25, 39.5625)
+size = Vector2(1100, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_evsmo"]
 size = Vector2(1090, 34.125)
@@ -36,36 +39,55 @@ collision_mask = 5
 position = Vector2(-102, 209)
 shape = SubResource("RectangleShape2D_hibjq")
 
+[node name="Sprite2D2" type="Sprite2D" parent="Walls/StaticBody2D/LeftWall" unique_id=30792264]
+position = Vector2(-2, 4)
+texture = ExtResource("2_7o6nb")
+
 [node name="TopWall" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=2094030806]
 position = Vector2(416.375, -141.21875)
 shape = SubResource("RectangleShape2D_fghu7")
+
+[node name="Sprite2D" type="Sprite2D" parent="Walls/StaticBody2D/TopWall" unique_id=880730957]
+position = Vector2(-0.375, 0.21875)
+texture = ExtResource("3_w3v2l")
 
 [node name="RightWall" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=1480441774]
 position = Vector2(936, 213)
 shape = SubResource("RectangleShape2D_hibjq")
 
+[node name="Sprite2D" type="Sprite2D" parent="Walls/StaticBody2D/RightWall" unique_id=1178776932]
+position = Vector2(0, 7.5)
+scale = Vector2(1, 0.9785714)
+texture = ExtResource("2_7o6nb")
+
 [node name="BottomWall" type="CollisionShape2D" parent="Walls/StaticBody2D" unique_id=565333130]
 position = Vector2(416, 568.9375)
 shape = SubResource("RectangleShape2D_evsmo")
 
+[node name="Sprite2D2" type="Sprite2D" parent="Walls/StaticBody2D/BottomWall" unique_id=1591996135]
+position = Vector2(0, -4.9375)
+texture = ExtResource("3_w3v2l")
+
 [node name="Entities" type="Node2D" parent="." unique_id=1487080622]
 
 [node name="Spawner" parent="." unique_id=1686735992 node_paths=PackedStringArray("container") instance=ExtResource("2_vs3x7")]
-position = Vector2(309, -153)
+position = Vector2(400, -250)
 spawn_pool = Array[ExtResource("3_uri12")]([ExtResource("4_b7ysx"), ExtResource("3_evsmo")])
 container = NodePath("../Entities")
 
 [node name="Spawner2" parent="." unique_id=763429253 node_paths=PackedStringArray("container") instance=ExtResource("2_vs3x7")]
-position = Vector2(216, 165)
+position = Vector2(400, 275)
 spawn_pool = Array[ExtResource("3_uri12")]([ExtResource("3_evsmo"), ExtResource("3_evsmo")])
 container = NodePath("../Entities")
 
 [node name="Spawner3" parent="." unique_id=482969327 node_paths=PackedStringArray("container") instance=ExtResource("2_vs3x7")]
-position = Vector2(-288, 97)
+position = Vector2(-400, 0)
+spawn_pool = Array[ExtResource("3_uri12")]([ExtResource("4_b7ysx"), ExtResource("3_evsmo")])
 container = NodePath("../Entities")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=138424923]
 stream = ExtResource("5_uri12")
+volume_db = -3.0
 autoplay = true
 parameters/looping = true
 
@@ -80,9 +102,13 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" unique_id=1455915643]
 shape = SubResource("RectangleShape2D_8s4bh")
 
+[node name="Sprite2D" type="Sprite2D" parent="Floor" unique_id=2014127104]
+z_index = -1
+texture = ExtResource("11_w3v2l")
+
 [node name="Encounter" parent="." unique_id=2030808805 instance=ExtResource("9_fdkvs")]
 position = Vector2(189, 416)
-enemy_count_to_spawn = 1
+enemy_count_to_spawn = 3
 
 [node name="TopDoor" parent="." unique_id=844228051 instance=ExtResource("10_fdkvs")]
 position = Vector2(5, -346)

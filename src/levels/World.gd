@@ -37,6 +37,7 @@ func instantiate_rooms():
         add_child(r)
         r.position = Vector2(i * ROOM_SPACING, 0)
         r.set_player(player)
+        #r.get_node("Encounter").enemy_count_to_spawn *= i #added this to add some difficulty increase
         all_rooms.append(r)
         r.room_complete.connect(_on_room_complete)
 
