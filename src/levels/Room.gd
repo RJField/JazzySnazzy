@@ -41,5 +41,5 @@ func get_doors() -> Array:
     return get_tree().get_nodes_in_group("doors").filter(
         func(d): return is_ancestor_of(d))
     
-func set_player(player: CharacterBody2D) -> void:
-    encounter.set_player(player)
+func set_player(body: CharacterBody2D) -> void:
+    encounter.set_player(body)

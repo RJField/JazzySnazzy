@@ -2,14 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://ccservoxiggme" path="res://assets/placeholder/sprites/placeholders/enemy.png" id="1_p6y2y"]
 [ext_resource type="Script" uid="uid://63q4j1sutsli" path="res://src/entities/enemies/BaseEnemy.gd" id="1_wvikt"]
-[ext_resource type="PackedScene" uid="uid://wi4wgbwq3m2r" path="res://src/entities/components/HitboxComponent.tscn" id="3_3opad"]
+[ext_resource type="PackedScene" uid="uid://denhi372r8xpk" path="res://src/entities/components/HitboxComponent.tscn" id="3_3opad"]
+[ext_resource type="PackedScene" uid="uid://c5wf8h1swolui" path="res://src/entities/components/HurtboxComponent.tscn" id="4_wmsxn"]
 [ext_resource type="PackedScene" uid="uid://cojkk48pi8e2o" path="res://src/entities/components/HealthComponent.tscn" id="4_xesd5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wvikt"]
 size = Vector2(30, 30)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8s4bh"]
-size = Vector2(32, 32)
 
 [node name="BaseEnemy" type="CharacterBody2D" unique_id=1478121783]
 collision_layer = 8
@@ -23,10 +21,8 @@ shape = SubResource("RectangleShape2D_wvikt")
 z_index = 4
 texture = ExtResource("1_p6y2y")
 
-[node name="HitboxComponent" parent="." unique_id=933166583 instance=ExtResource("3_3opad")]
-collision_mask = 4
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="HitboxComponent" unique_id=2055536570]
-shape = SubResource("RectangleShape2D_8s4bh")
-
 [node name="HealthComponent" parent="." unique_id=1421218207 instance=ExtResource("4_xesd5")]
+
+[node name="HurtboxComponent" parent="." unique_id=1803605233 instance=ExtResource("4_wmsxn")]
+
+[node name="HitboxComponent" parent="." unique_id=390258389 instance=ExtResource("3_3opad")]
