@@ -10,7 +10,7 @@
 size = Vector2(30, 30)
 
 [node name="BaseEnemy" type="CharacterBody2D" unique_id=1478121783]
-collision_layer = 8
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_wvikt")
 
@@ -24,5 +24,8 @@ texture = ExtResource("1_p6y2y")
 [node name="HealthComponent" parent="." unique_id=1421218207 instance=ExtResource("4_xesd5")]
 
 [node name="HurtboxComponent" parent="." unique_id=1803605233 instance=ExtResource("4_wmsxn")]
+collision_layer = 16
+collision_mask = 0
 
 [node name="HitboxComponent" parent="." unique_id=390258389 instance=ExtResource("3_3opad")]
+collision_mask = 8

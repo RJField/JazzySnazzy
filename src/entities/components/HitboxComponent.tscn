@@ -6,6 +6,8 @@
 size = Vector2(10, 10)
 
 [node name="HitboxComponent" type="Area2D" unique_id=390258389]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_sdgr0")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=633812111]
