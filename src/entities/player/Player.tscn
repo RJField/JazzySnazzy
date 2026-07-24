@@ -21,6 +21,7 @@ bullet_scene = ExtResource("2_lvau8")
 texture = ExtResource("1_vna0p")
 
 [node name="HealthComponent" parent="." unique_id=1421218207 instance=ExtResource("2_vna0p")]
+max_health = 10.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1203826617]
 

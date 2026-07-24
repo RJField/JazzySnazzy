@@ -18,6 +18,9 @@ func _physics_process(_delta: float) -> void:
 	if behavior_states.is_empty():
 		return
 	var active_state = behavior_states[0]
+	#checks if player/target still exists/is valid, which currently results in the enemy just stopping in their track
+	if not is_instance_valid(_target):
+		return
 	velocity = active_state.tick(self, _target, _delta) * speed
 	move_and_slide()
 

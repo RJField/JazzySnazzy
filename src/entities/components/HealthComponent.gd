@@ -14,6 +14,7 @@ func damage(amount: float) -> void:
 	current_health -= amount
 	if current_health <= 0:
 		health_depleted.emit()
+		print("health reached 0 for ", get_parent())
 
 func reset_health(amount: float) -> void:
 	max_health = amount
