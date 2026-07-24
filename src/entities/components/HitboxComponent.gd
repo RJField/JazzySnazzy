@@ -13,6 +13,7 @@ func _ready() -> void:
     area_entered.connect(_on_area_entered)
     area_exited.connect(_on_area_exited)
     body_entered.connect(_on_body_entered)
+    print("Hitbox component running for", get_parent())
 
 #when an overlap is detected, add the overlapping object/area to the array tracking currently overlapping areas.
 func _on_area_entered(area: Area2D) -> void:
@@ -36,6 +37,7 @@ func _physics_process(delta: float) -> void:
         var last_hit = last_hit_times.get(area, -INF)
         if now - last_hit >= collision_cooldown * 1000:
             area.damage(damage_amount)
+            print("Damage dealt to:", area.get_name(), " by ",  get_parent().name)
             hit_confirmed.emit()
             last_hit_times[area] = now
 

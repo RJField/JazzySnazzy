@@ -40,12 +40,5 @@ func configure(def: EnemyData, target: Node2D) -> void:
 	for behavior in _def.behaviors:
 		behavior_states.append(behavior.create_state())
 
-# This function became obsolete. Keeping as memory. It was used to set some stats on a new enemy, but it created a bug and became redundant through the fix on 7/11/26
-#func _apply_stats() -> void:
-#	if _def == null:
-#		print("Enemy spawned without a def, using inspector values")
-#		return
-#	speed = _def.speed
-
 func set_target(body: CharacterBody2D):
 	_target = body

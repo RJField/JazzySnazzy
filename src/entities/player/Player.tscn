@@ -30,7 +30,6 @@ shape = SubResource("RectangleShape2D_s6s2l")
 [node name="WeaponPivot" type="Marker2D" parent="." unique_id=1829202359]
 
 [node name="HurtboxComponent" parent="." unique_id=1803605233 instance=ExtResource("5_lvau8")]
-position = Vector2(92.35871, 173.87947)
 collision_layer = 8
 collision_mask = 0
 
