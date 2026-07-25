@@ -22,6 +22,12 @@ func fill_spawners() -> Array:
         func(s): return room.is_ancestor_of(s)
     )
 
+func fill_reward_spawners() -> Array:
+    var room = get_parent()
+    return get_tree().get_nodes_in_group("rewardspawners").filter(
+        func(s): return room.is_ancestor_of(s)
+    )
+
 func choose_spawner() -> Spawner:
         if spawners.is_empty():
             return null 

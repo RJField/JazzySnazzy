@@ -19,4 +19,3 @@ func _on_body_entered(body: Node) -> void:
 
 func set_damage(damage: float) -> void:
     hitbox.damage_amount = damage
-    print("damage set to ", hitbox.damage_amount)

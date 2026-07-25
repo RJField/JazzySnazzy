@@ -19,6 +19,9 @@ func _ready() -> void:
     floor_area.body_exited.connect(_on_body_exited)
     for door in get_doors():
         room_complete.connect(door.unlock)
+    for rewardspawner in fill_reward_spawners():
+        print("reward spawner connected:", rewardspawner)
+        room_complete.connect(rewardspawner.spawn)
 
 func _on_body_entered(body: Node):
     if not body.is_in_group("player"):
@@ -43,3 +46,8 @@ func get_doors() -> Array:
     
 func set_player(body: CharacterBody2D) -> void:
     encounter.set_player(body)
+
+func fill_reward_spawners() -> Array:
+    return get_tree().get_nodes_in_group("rewardspawners").filter(
+        func(s): return is_ancestor_of(s)
+    )

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://couomoqhgtprs" path="res://assets/placeholder/sprites/placeholders/player.png" id="1_vna0p"]
 [ext_resource type="PackedScene" uid="uid://wr5a544fxf2n" path="res://src/weapons/Bullet.tscn" id="2_lvau8"]
 [ext_resource type="PackedScene" uid="uid://cojkk48pi8e2o" path="res://src/entities/components/HealthComponent.tscn" id="2_vna0p"]
-[ext_resource type="Resource" uid="uid://txl852t2xhfx" path="res://src/weapons/Sniper.tres" id="4_j0f6w"]
+[ext_resource type="Resource" uid="uid://gnhncq81ktu5" path="res://src/weapons/BasePistol.tres" id="4_j0f6w"]
 [ext_resource type="PackedScene" uid="uid://1ieh58vj2okx" path="res://src/weapons/Weapon.tscn" id="5_gc66i"]
 [ext_resource type="PackedScene" uid="uid://c5wf8h1swolui" path="res://src/entities/components/HurtboxComponent.tscn" id="5_lvau8"]
 

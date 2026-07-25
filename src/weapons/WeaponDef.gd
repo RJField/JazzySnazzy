@@ -4,6 +4,7 @@ class_name WeaponDef extends Resource
 #weapon description and art
 @export var display_name: String
 @export var base_sprite: Texture2D
+@export var scene : PackedScene
 
 #weapon stats
 @export var weapon_base_damage: float = 10.0

@@ -3,10 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://che35f4aix6s0" path="res://assets/placeholder/sprites/placeholders/weapon_2.png" id="1_4sd1p"]
 [ext_resource type="Script" uid="uid://bqofxvx82bh4" path="res://src/weapons/WeaponDef.gd" id="1_pbb1b"]
 [ext_resource type="PackedScene" uid="uid://wr5a544fxf2n" path="res://src/weapons/Bullet.tscn" id="1_snts1"]
+[ext_resource type="PackedScene" uid="uid://3rgtc1i1ne4n" path="res://src/levels/room_content/Pickup.tscn" id="3_pqa1s"]
 
 [resource]
 script = ExtResource("1_pbb1b")
 base_sprite = ExtResource("1_4sd1p")
+scene = ExtResource("3_pqa1s")
 weapon_base_damage = 300.0
 fire_rate = 0.2
 projectile = ExtResource("1_snts1")

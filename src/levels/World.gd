@@ -44,7 +44,7 @@ func instantiate_rooms():
 func _on_room_complete() -> void:
     var next = get_next_room()
     if next:
-        print("room completed!")
+        print("from world.gd: room completed!")
 
 func get_next_room() -> Room:
     var room_index = all_rooms.find(current_room) + 1

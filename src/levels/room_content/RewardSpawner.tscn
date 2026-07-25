@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dl8p4davrmsqg"]
+
+[ext_resource type="Script" uid="uid://c5yj0ahmasapf" path="res://src/levels/room_content/RewardSpawner.gd" id="1_lsgrx"]
+[ext_resource type="Resource" uid="uid://gnhncq81ktu5" path="res://src/weapons/BasePistol.tres" id="2_ofw3w"]
+[ext_resource type="Resource" uid="uid://txl852t2xhfx" path="res://src/weapons/Sniper.tres" id="3_7cias"]
+
+[node name="RewardSpawner" type="Marker2D" unique_id=1106889573]
+script = ExtResource("1_lsgrx")
+reward_pool = [ExtResource("2_ofw3w"), ExtResource("3_7cias")]
