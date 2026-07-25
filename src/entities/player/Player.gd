@@ -5,7 +5,6 @@ signal player_death_event
 @onready var health_component: HealthComponent = $HealthComponent
 
 @export var speed: float = 200.0
-@export var bullet_scene : PackedScene
 @export var weapon_scene : PackedScene
 @export var starting_wdef : WeaponDef
 

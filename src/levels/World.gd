@@ -12,7 +12,7 @@ var current_room: Room
 
 func _ready() -> void:
     instantiate_rooms()
-    set_door_taget()
+    set_door_target()
     activate(all_rooms[0], Vector2.ZERO)
     return
 
@@ -52,7 +52,7 @@ func get_next_room() -> Room:
         return null
     return all_rooms[room_index]
     
-func set_door_taget():
+func set_door_target():
     print("set_door_target called for count of rooms: ", all_rooms.size())
     for i in all_rooms.size():
         if i + 1 >= all_rooms.size():
