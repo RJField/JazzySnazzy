@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://1ieh58vj2okx"]
+
+[ext_resource type="Script" uid="uid://ce5n0xaebjp6j" path="res://src/weapons/Weapon.gd" id="1_vnuja"]
+
+[node name="Weapon" type="Node2D" unique_id=1426376707]
+script = ExtResource("1_vnuja")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2020732569]
+
+[node name="Muzzle" type="Marker2D" parent="." unique_id=960401249]

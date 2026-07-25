@@ -16,3 +16,7 @@ func _on_hit_confirmed() -> void:
 
 func _on_body_entered(body: Node) -> void:
    queue_free()
+
+func set_damage(damage: float) -> void:
+    hitbox.damage_amount = damage
+    print("damage set to ", hitbox.damage_amount)

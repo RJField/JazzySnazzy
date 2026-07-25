@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="WeaponDef" format=3 uid="uid://gnhncq81ktu5"]
+
+[ext_resource type="Script" uid="uid://bqofxvx82bh4" path="res://src/weapons/WeaponDef.gd" id="1_kf5ad"]
+[ext_resource type="PackedScene" uid="uid://wr5a544fxf2n" path="res://src/weapons/Bullet.tscn" id="1_yfcfv"]
+
+[resource]
+script = ExtResource("1_kf5ad")
+display_name = "Base Pistol"
+projectile = ExtResource("1_yfcfv")
+metadata/_custom_type_script = "uid://bqofxvx82bh4"
