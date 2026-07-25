@@ -62,5 +62,5 @@ func set_door_taget():
             door.transition_requested.connect(_on_transition_requested)
 
 func _on_transition_requested(target):
-    activate(target, target.position)
+    activate.call_deferred(target, target.position)
     print("moving to next level")
