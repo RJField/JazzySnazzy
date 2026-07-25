@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal player_death_event
+signal dropping_weapon(weapon: WeaponLoadout, position: Vector2)
 
 @onready var health_component: HealthComponent = $HealthComponent
 
@@ -47,8 +48,18 @@ func _on_death() -> void:
 
 func equip(loadout: WeaponLoadout):
     if _current_weapon:
+        drop_current_weapon()       
         _current_weapon.queue_free()
     var w = weapon_scene.instantiate()
     $WeaponPivot.add_child(w)
     w.configure(loadout.def)
     _current_weapon = w
+
+func drop_current_weapon() -> void:
+    print("called drop current weapon")
+    if not _current_weapon:
+        return
+    var drop_loadout = WeaponLoadout.new()
+    drop_loadout.def = _current_weapon._def
+    var drop_offset = -global_transform.x * 60
+    dropping_weapon.emit(drop_loadout, global_position + drop_offset)

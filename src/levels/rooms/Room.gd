@@ -5,8 +5,14 @@ signal room_complete
 @onready var floor_area: Area2D = $Floor
 @onready var room_state: RoomState = $RoomState
 @onready var encounter: Encounter = $Encounter
+@onready var entities: Node2D = $Entities
+
+@export var pickup_scene: PackedScene
 
 var player: CharacterBody2D
+
+#world will call this, used initially to help spawn dropped weapons
+var _active: bool = false
 
 func _ready() -> void:
     room_state.state_changed.connect(_on_state_changed)
@@ -46,8 +52,20 @@ func get_doors() -> Array:
     
 func set_player(body: CharacterBody2D) -> void:
     encounter.set_player(body)
+    player = body
+    player.dropping_weapon.connect(spawn_pickup, CONNECT_DEFERRED)
 
 func fill_reward_spawners() -> Array:
     return get_tree().get_nodes_in_group("rewardspawners").filter(
         func(s): return is_ancestor_of(s)
     )
+
+func set_active(value: bool):
+    _active = value
+
+func spawn_pickup(weapon: WeaponLoadout, drop_position: Vector2):
+    var drop = pickup_scene.instantiate()
+    entities.add_child(drop)
+    drop.configure(weapon.def)
+    drop.global_position = drop_position
+

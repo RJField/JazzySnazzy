@@ -25,11 +25,13 @@ func activate(target, entry):
             r.process_mode = Node.PROCESS_MODE_INHERIT
             r.visible = true
             current_room = r
+            current_room.set_active(true)
             print(current_room)
         else:
             #set dormant
             r.process_mode = Node.PROCESS_MODE_DISABLED
             r.visible = false
+            r.set_active(false)
 
 func instantiate_rooms():
     for i in room_count:

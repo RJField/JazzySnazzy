@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cd84v56ufuvx1" path="res://src/levels/rooms/Room.gd" id="1_ewo0c"]
 [ext_resource type="Texture2D" uid="uid://dbxtlb0b3cyuo" path="res://assets/placeholder/sprites/placeholders/short_wall_50x700.png" id="2_7o6nb"]
 [ext_resource type="PackedScene" uid="uid://cxtqsqgsg3f4u" path="res://src/levels/room_content/Spawner.tscn" id="2_vs3x7"]
+[ext_resource type="PackedScene" uid="uid://3rgtc1i1ne4n" path="res://src/levels/room_content/Pickup.tscn" id="2_yhm18"]
 [ext_resource type="Resource" uid="uid://gv5xchtq5ofh" path="res://src/entities/enemies/goblin.tres" id="3_evsmo"]
 [ext_resource type="Script" uid="uid://cjdvlx48btii3" path="res://src/entities/enemies/EnemyData.gd" id="3_uri12"]
 [ext_resource type="Texture2D" uid="uid://5poytskxilta" path="res://assets/placeholder/sprites/placeholders/long_wall_1100x40.png" id="3_w3v2l"]
@@ -29,6 +30,7 @@ size = Vector2(1000, 700)
 
 [node name="Room" type="Node2D" unique_id=2058189957]
 script = ExtResource("1_ewo0c")
+pickup_scene = ExtResource("2_yhm18")
 
 [node name="Walls" type="Node2D" parent="." unique_id=795329278]
 
@@ -113,7 +115,7 @@ texture = ExtResource("11_w3v2l")
 
 [node name="Encounter" parent="." unique_id=2030808805 instance=ExtResource("9_fdkvs")]
 position = Vector2(189, 416)
-enemy_count_to_spawn = 2
+enemy_count_to_spawn = 1
 
 [node name="TopDoor" parent="." unique_id=844228051 instance=ExtResource("10_fdkvs")]
 position = Vector2(5, -346)
