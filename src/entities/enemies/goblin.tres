@@ -12,10 +12,10 @@ metadata/_custom_type_script = "uid://ddimt1l6gdhxk"
 
 [resource]
 script = ExtResource("1_doyp8")
-max_health = 30.0
-speed = 150.0
 display_name = "Goblin"
 scene = ExtResource("1_hqpy2")
-behaviors = Array[ExtResource("1_sdgyl")]([SubResource("Resource_n7que")])
 texture = ExtResource("5_eidin")
+speed = 150.0
+max_health = 30.0
+behaviors = Array[ExtResource("1_sdgyl")]([SubResource("Resource_n7que")])
 metadata/_custom_type_script = "uid://cjdvlx48btii3"

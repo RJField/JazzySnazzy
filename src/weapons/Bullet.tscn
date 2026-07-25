@@ -18,6 +18,7 @@ texture = ExtResource("2_j3c6t")
 [node name="HitboxComponent" parent="." unique_id=390258389 instance=ExtResource("3_s6s2l")]
 collision_layer = 4
 collision_mask = 17
+damage_amount = 1.0
 
 [node name="CollisionShape2D" parent="HitboxComponent" index="0" unique_id=633812111]
 shape = SubResource("RectangleShape2D_s6s2l")

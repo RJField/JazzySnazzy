@@ -12,8 +12,8 @@ metadata/_custom_type_script = "uid://ddimt1l6gdhxk"
 
 [resource]
 script = ExtResource("1_4rvn7")
-speed = 50.0
 scene = ExtResource("1_qaygt")
-behaviors = Array[ExtResource("1_j3v1g")]([SubResource("Resource_xesd5")])
 texture = ExtResource("5_rqc1d")
+speed = 50.0
+behaviors = Array[ExtResource("1_j3v1g")]([SubResource("Resource_xesd5")])
 metadata/_custom_type_script = "uid://cjdvlx48btii3"

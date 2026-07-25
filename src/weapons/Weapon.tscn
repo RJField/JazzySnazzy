@@ -6,5 +6,7 @@
 script = ExtResource("1_vnuja")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2020732569]
+rotation = 1.5707964
+offset = Vector2(0, -10)
 
 [node name="Muzzle" type="Marker2D" parent="." unique_id=960401249]
